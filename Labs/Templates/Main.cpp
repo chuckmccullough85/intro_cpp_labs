@@ -1,0 +1,24 @@
+#include <iostream>
+#include "Address.h"
+#include "Employee.h"
+#include "Company.h"
+using namespace std;
+using namespace payroll;
+
+
+int main()
+{
+    Company acme("Acme, Inc.");
+    Employee e1("John", 100000); 
+    Employee e2("Mary", 120000);
+    Employee e3("Bob", 80000);
+    Employee e4("Alice", 90000);
+
+    acme.hire(&e1);
+    acme.hire(&e2);
+    acme.hire(&e3);
+    acme.hire(&e4);    
+
+    cout << "Total payroll: " << acme.pay() << endl;
+
+}

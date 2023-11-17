@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Temperature.h"
 
 int main()
 {
@@ -7,7 +6,7 @@ int main()
     float c = 0;
     while (f <= 212)
     {
-        c = f2c(f);
+        c = (f - 32) * 5.0 / 9.0;
         std::cout << c ;
         if (f < 40) std::cout << " cold" << std::endl;
         else if (f>115) std::cout << " hot" << std::endl;
@@ -17,5 +16,3 @@ int main()
     }
     return 0;
 }
-
-
